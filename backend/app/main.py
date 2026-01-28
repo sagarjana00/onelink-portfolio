@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from sqlalchemy import text
 
 from app.db.database import engine, get_db
+from app.db.init_db import init_db
 from app.api import auth, users, projects, portfolio, resume
 
 # Import models AFTER database setup to create tables
@@ -29,10 +30,14 @@ app.include_router(projects.router, prefix="/projects", tags=["projects"])
 app.include_router(portfolio.router, prefix="/portfolio", tags=["portfolio"])
 app.include_router(resume.router, prefix="/resume", tags=["resume"])
 
+@app.on_event("startup")
+def on_startup():
+    init_db()
+
 @app.get("/")
 async def read_root():
-    return {"message": "OneLink Portfolio API ✅"}
+    return {"message": "OneLink Portfolio API "}
 
 @app.get("/health")
 async def health_check():
-    return {"status": "healthy"}
+    return {"status": "ok", "database": "sqlite"}
