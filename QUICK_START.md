@@ -4,7 +4,7 @@
 
 ### Step 1: Clone & Install
 ```bash
-cd /home/rudrabhowmick/backend/fastapi/onelink-portfolio/backend
+cd <project-folder>/backend
 
 # Create virtual environment
 python3 -m venv venv
