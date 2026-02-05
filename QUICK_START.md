@@ -34,7 +34,7 @@ cp .env.example .env
 nano .env
 ```
 
-Update these values:
+Update these values in .env file:
 ```env
 GITHUB_CLIENT_ID=your_client_id_here
 GITHUB_CLIENT_SECRET=your_client_secret_here
