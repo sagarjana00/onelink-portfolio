@@ -1,40 +1,33 @@
 {
-  "name": "onelink-portfolio-frontend",
-  "version": "1.0.0",
-  "description": "Frontend for OneLink Portfolio - Auto-generated portfolios from GitHub",
+  "name": "frontend",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx",
+    "format": "prettier --write .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "22": "^0.0.0",
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "autoprefixer": "^10.4.0",
-    "axios": "^1.6.0",
-    "clsx": "^2.0.0",
-    "date-fns": "^2.30.0",
-    "framer-motion": "^10.16.0",
-    "lucide-react": "^0.292.0",
-    "next": "^16.1.6",
-    "next-themes": "^0.2.1",
-    "postcss": "^8.4.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hot-toast": "^2.4.0",
-    "react-router-dom": "^6.20.0",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5.3.0",
-    "zustand": "^4.4.0"
+    "axios": "^1.13.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.13.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.0",
-    "eslint": "^8.55.0",
-    "eslint-config-next": "^14.0.0"
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.24",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.2.4"
   }
 }
