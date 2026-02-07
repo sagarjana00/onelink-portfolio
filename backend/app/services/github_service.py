@@ -187,7 +187,8 @@ class GitHubService:
     @staticmethod
     def classify_project(deployed_url: Optional[str], has_homepage: bool, description: Optional[str]) -> str:
         """Classify project status"""
-        if deployed_url or has_homepage:
+        # Only mark as deployed when a real demo URL is detected
+        if deployed_url:
             return "deployed"
         
         if description and any(

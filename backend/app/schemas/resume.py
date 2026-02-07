@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional, List
 from datetime import datetime
 
@@ -32,10 +32,10 @@ class ExperienceResponse(ExperienceBase):
 
 class EducationBase(BaseModel):
     school: str
-    degree: str
+    degree: Optional[str] = ""
     field_of_study: Optional[str] = None
     description: Optional[str] = None
-    start_date: datetime
+    start_date: datetime = Field(default_factory=datetime.utcnow)
     end_date: Optional[datetime] = None
     is_current: bool = False
 
